@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>Dashboard</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="images/icon.png">
+    </head>
+    <body>
+        <section class="banner style5 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+                <div class="content" style="font-family:consolas">
+                    <h1 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Story</h1>
+
+                    <form method="post" action="insertArticle.php" target="_blank">
+                        <div class="field">
+                            <label for="status">Title</label>
+                            <input type="text" name="title" id="title" value="" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Content</label>
+                            <textarea name="content" id="content" rows="6"></textarea>
+                        </div>
+                        <div class="field">
+                            <label for="username">Author</label>
+                            <input type="text" name="username" id="username" value="" />
+                        </div>
+                        <div class="field half first">
+                            <input name="human" id="human" type="checkbox" value="on">
+                            <label for="human">I want it to be public</label>
+                        </div>
+                        <div class="field half">
+                            <ul class="actions">
+                                <li> 
+                                    <center>
+                                            <input type="submit" class="button fit" value="Send">
+                                    </center>
+                                </li>
+                                <input id="display" name="display" value=0 style="display:none;">
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="image">
+                    <img src="images/banner.jpg" alt="" />
+                </div>
+            </section>
+
+    </body>
+</html>
