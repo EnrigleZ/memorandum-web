@@ -3,19 +3,19 @@ function changeDisplayCondition() {
   var hidden_disp = document.getElementById("display");
   if (button.value == "Public") {
     button.value = "Private";
-    button.style.backgroundColor = "pink";
+    //button.style.backgroundColor = "pink";
     hidden_disp.value = 0;
   }
   else {
     button.value = "Public";
-    button.style.backgroundColor = "#add2f0";
+   // button.style.backgroundColor = "#add2f0";
     hidden_disp.value = 1;
   }
 }
 
 function changeSendCondition() {
   var button = document.getElementById("submit_button");
-  button.style.backgroundColor = "green";
+  //button.style.backgroundColor = "green";
   button.value = "Sending";
 
 }
@@ -59,6 +59,23 @@ function getStarted() {
   var button = document.getElementById("display_button");
   var hidden_disp = document.getElementById("display");
   button.value = "Private";
-  button.style.backgroundColor = "pink";
+  //button.style.backgroundColor = "pink";
   hidden_disp.value = 0;
+}
+
+
+function changeBannerImage(node) {
+  var banner_image_list = ["banner.jpg", "back_he.jpg"];
+  var i = 0;
+  var current_image_name = node.src.substr(node.src.lastIndexOf('/')+1);   
+  //alert(current_image_name);
+  for (i = 0; i < banner_image_list.length; i++) {
+    if (banner_image_list[i] == current_image_name) {
+      ++i; break;
+    }
+  }
+  i = i % banner_image_list.length;
+
+  node.src = "./images/" + banner_image_list[i];
+  
 }

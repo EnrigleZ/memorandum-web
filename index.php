@@ -74,9 +74,11 @@
 								<ul class="actions">
 									<li> 
 										<center>
-										<input onclick="changeSendCondition();" name="submit" id="submit_button" type="submit" value="Send">
+										<!--input onclick="changeSendCondition();" name="submit" id="submit_button" type="submit" value="Send">
 										<input onclick="changeDisplayCondition();" style="background-color: pink;" 
-												name="display_button" id="display_button" type="button" value="Private">
+												name="display_button" id="display_button" type="button" value="Private"-->
+										<input onclick="changeSendCondition();" name="submit" id="submit_button" type="submit" value="Send">
+										<input onclick="changeDisplayCondition();" name="display_button" id="display_button" type="button" value="Private">
 										</center>
 									</li>
 									<input id="display" name="display" value=0 style="display:none;">
@@ -84,7 +86,7 @@
 							</form>
 						</div>
 						<div class="image">
-							<img src="images/banner.jpg" alt="" />
+							<img src="images/back_he.jpg" alt="" onclick="changeBannerImage(this)"/>
 						</div>
 					</section>
 
