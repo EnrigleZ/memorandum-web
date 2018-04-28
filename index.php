@@ -46,6 +46,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/reminder.css" />
+		<link rel="stylesheet" href="assets/css/self.css" />
 		<link rel="shortcut icon" href="images/icon.png">
 		<script src="assets/js/style.js"></script>
 		<script src="assets/js/reminder.js"></script>
@@ -77,8 +78,8 @@
 										<!--input onclick="changeSendCondition();" name="submit" id="submit_button" type="submit" value="Send">
 										<input onclick="changeDisplayCondition();" style="background-color: pink;" 
 												name="display_button" id="display_button" type="button" value="Private"-->
-										<input onclick="changeSendCondition();" name="submit" id="submit_button" type="submit" value="Send">
-										<input onclick="changeDisplayCondition();" name="display_button" id="display_button" type="button" value="Private">
+										<input onclick="changeSendCondition();" class="banner" id="submit_button" type="submit" value="Send">
+										<input onclick="changeDisplayCondition();" class="banner private" id="display_button" type="button" value="Private">
 										</center>
 									</li>
 									<input id="display" name="display" value=0 style="display:none;">
@@ -86,7 +87,7 @@
 							</form>
 						</div>
 						<div class="image">
-							<img src="images/back_he.jpg" alt="" onclick="changeBannerImage(this)"/>
+							<img src="images/back_he.jpg" alt="" onclick="changeBannerImage(this);changeScheme(this);"/>
 						</div>
 					</section>
 

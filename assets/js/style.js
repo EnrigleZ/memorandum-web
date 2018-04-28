@@ -1,14 +1,17 @@
 function changeDisplayCondition() {
   var button = document.getElementById("display_button");
   var hidden_disp = document.getElementById("display");
-  if (button.value == "Public") {
+
+  if (button.classList.contains('public')) {
+    button.classList.remove('public');
+    button.classList.add('private');
     button.value = "Private";
-    //button.style.backgroundColor = "pink";
     hidden_disp.value = 0;
   }
   else {
+    button.classList.remove('private');
+    button.classList.add('public');
     button.value = "Public";
-   // button.style.backgroundColor = "#add2f0";
     hidden_disp.value = 1;
   }
 }
@@ -59,7 +62,7 @@ function getStarted() {
   var button = document.getElementById("display_button");
   var hidden_disp = document.getElementById("display");
   button.value = "Private";
-  //button.style.backgroundColor = "pink";
+  button.classList.add('private');
   hidden_disp.value = 0;
 }
 
@@ -77,5 +80,20 @@ function changeBannerImage(node) {
   i = i % banner_image_list.length;
 
   node.src = "./images/" + banner_image_list[i];
-  
+}
+
+function changeScheme(node) {
+  var p = node;
+  while (p.tagName != 'BODY') {
+    if (p.nodeName == 'SECTION') {
+      p.classList.add('animate');
+      if (p.classList.contains('invert')) p.classList.remove('invert');
+      else p.classList.add('invert');
+      setTimeout(function() {
+        p.classList.remove('animate');
+      }, 500);
+      return;
+    }
+    p = p.parentNode;
+  }
 }
