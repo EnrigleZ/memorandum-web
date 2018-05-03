@@ -75,9 +75,6 @@
 								<ul class="actions">
 									<li> 
 										<center>
-										<!--input onclick="changeSendCondition();" name="submit" id="submit_button" type="submit" value="Send">
-										<input onclick="changeDisplayCondition();" style="background-color: pink;" 
-												name="display_button" id="display_button" type="button" value="Private"-->
 										<input onclick="changeSendCondition();" class="banner" id="submit_button" type="submit" value="Send">
 										<input onclick="changeDisplayCondition();" class="banner private" id="display_button" type="button" value="Private">
 										</center>
@@ -164,33 +161,27 @@
 
 					<!-- 这里进入文章-->
 					<?php
-						$sql_select_article = "SELECT * FROM article WHERE display ORDER BY addtime DESC;";
-						$result_article = $conn->query($sql_select_article);
-						$article_cnt = 0;
+						function createArticleSection($cnt) {
+							global $result_article, $default_content, $default_title;
 
-						function createArticleSection() {
-							global $result_article, $article_cnt, $default_content, $default_title;
-
-							$row = $GLOBALS["result_article"]->fetch_assoc();
+							$row = $result_article->fetch_assoc();
 							if ($row) {
 								$article_title = $row["title"];
 								$article_content = $row["content"];
 							}
 							else {
 								return 0;
-								//$article_title = $default_title;
-								//$article_content = $default_content;
 							}
 
-							$GLOBALS["article_cnt"] ++;
+							$cnt++;
 							
 							if ($row["titlepicture"] == "") {
-								$tmp = $GLOBALS["article_cnt"] % 3 + 1;
+								$tmp = $cnt % 3 + 1;
 								$pic_path = "images/spotlight0{$tmp}.jpg";
 							}
 							else $pic_path = "images/".$row["titlepicture"];
 							
-							if ($GLOBALS["article_cnt"] % 2 == 1) {
+							if ($cnt % 2 == 1) {
 								echo '<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">';
 							}
 							else {
@@ -222,9 +213,20 @@
 						}
 					?>
 				<!-- Two -->
+				<section class="wrapper style1 align-center">
+					<div class="inner">
+						<h2>文字&amp;笔记</h2>
+						<p>只是把自己瞎想的记下来了</p>
+					</div>
 					<?php 
-						while (createArticleSection());
+						$sql_select_article = "SELECT * FROM article WHERE display ORDER BY addtime DESC;";
+						$result_article = $conn->query($sql_select_article);
+						$article_cnt = 0;
+						while (createArticleSection($article_cnt)) {
+							$article_cnt++;
+						}
 					?>
+				</section>
 				<!-- Three -->
 					
                     
