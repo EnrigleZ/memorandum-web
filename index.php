@@ -92,7 +92,7 @@
 					</section>
 
 
-					<!-- Six -->
+					<!-- Six >
 					<section class="wrapper style1 align-center">
 						<div class="inner">
 							<h2>这个地方该用来干啥呢...</h2>
@@ -160,7 +160,7 @@
 								</section>
 							</div>
 						</div>
-					</section>
+					</section -->
 
 					<!-- 这里进入文章-->
 					<?php
@@ -231,10 +231,10 @@
 				<!-- Seven -->
 					<section class="wrapper style1 align-center">
 						<div class="inner medium">
-							<h1>Story</h1>
-							<p class="major"><!--[-->A (modular, highly tweakable) responsive one-page template designed by <a href="#">HTML5 UP</a> and released for free under the <a href="#">Creative Commons</a>.<!--]--></p>
+							<h1>End of Story</h1>
+							<p class="major"></p>
 							<ul class="actions vertical">
-								<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
+								<li><a href="#first" class="button big wide smooth-scroll-middle">Back to Top</a></li>
 							</ul>
 
 						</div>
@@ -250,7 +250,6 @@
 								<li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
 								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
-							<!--<p>&copy; Untitled. More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>.</p>-->
 						</div>
 					</footer>
 
