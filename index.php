@@ -6,8 +6,8 @@
 	// $_POST["name in label"]
 	
 	$servername = "localhost";
-	$username = "root";
-	$password = "dAUHKGpp91Wy";
+	$username = "memorandum";
+	$password = "fred1111";
 	$dbname = "mydb";
 
 	date_default_timezone_set("PRC");

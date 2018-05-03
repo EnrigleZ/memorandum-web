@@ -6,9 +6,9 @@
 	</head>
 
 <?php
-    $servername = "localhost";
-	$username = "root";
-	$password = "dAUHKGpp91Wy";
+	$servername = "localhost";
+	$username = "memorandum";
+	$password = "fred1111";
 	$dbname = "mydb";
 
 	// 创建连接

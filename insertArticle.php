@@ -7,8 +7,8 @@
 
 <?php
 	$servername = "localhost";
-	$username = "root";
-	$password = "dAUHKGpp91Wy";
+	$username = "memorandum";
+	$password = "fred1111";
 	$dbname = "mydb";
     
     if (!empty($_POST["content"])) {
